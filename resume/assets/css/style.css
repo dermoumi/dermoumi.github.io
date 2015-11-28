@@ -1,0 +1,66 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #C1E8DA;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 62.5%;
+}
+
+#wrapper {
+    font-size: 2em;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #FFF;
+}
+
+#info {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+
+#info .general-info {
+    width: auto;
+    margin: 1em;
+    -webkit-box-flex: 2;
+    -webkit-flex: 2 1 auto;
+    -ms-flex: 2 1 auto;
+    flex: 2 1 auto;
+}
+
+#info .picture-container {
+    width: 20%;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+#info .picture-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+details h4 {
+    display: inline-block;
+}
+
+#skills h2 {
+    color: #866770;
+}

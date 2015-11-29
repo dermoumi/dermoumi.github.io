@@ -2,6 +2,7 @@
 @import compass/css3/columns
 @import compass/css3/border-radius
 @import compass/css3/transform
+@import compass/css3/flexbox
 
 $accent-1: #D72E2E
 $accent-2: #00A6C9
@@ -173,17 +174,28 @@ body
         text-align: center
     .item
         +border-radius(100%, 100%)
-        background: #EEE
-        width: 200px
+        width: 100%
         height: 200px
         margin: 0 auto 1em auto
         position: relative
         color: #FFF
-        .content
-            +translate(-50%, -50%)
-            top: 50%
+        +display-flex(inline-flex)
+        +justify-content(center)
+        +align-items(center)
+        &::before
+            +border-radius(100%, 100%)
+            top: 0
             left: 50%
+            margin-left: -100px
+            content: " "
             position: absolute
+            z-index: -2
+            width: 200px
+            height: 200px
+            display: block
+            background: #EEE
+        .content
+            position: relative
             z-index: 1
             width: 100%
             h3
@@ -192,49 +204,47 @@ body
                 font-size: .9em
                 color: #CCC
                 line-height: 1
-        &::before
-            +border-radius(100%, 100%)
-            +translate(-50%, -50%)
-            top: 50%
-            left: 50%
-            content: " "
-            position: absolute
-            z-index: 0
-            width: 0
-            height: 0
-            display: block
-            background: #888
-        &.proficiency-100::before
-            width: 100%
-            height: 100%
-        &.proficiency-90::before
-            width: 95%
-            height: 95%
-        &.proficiency-80::before
-            width: 90%
-            height: 90%
-        &.proficiency-70::before
+            &::before
+                +border-radius(100%, 100%)
+                +translate(-50%, -50%)
+                position: absolute
+                top: 50%
+                left: 50%
+                content: " "
+                z-index: -1
+                display: block
+                background: #888
+        &.proficiency-100 .content::before
+            width: 200px
+            height: 200px
+        &.proficiency-90 .content::before
+            width: 190px
+            height: 190px
+        &.proficiency-80 .content::before
+            width: 180px
+            height: 180px
+        &.proficiency-70 .content::before
             width: 85%
             height: 85%
-        &.proficiency-60::before
+        &.proficiency-60 .content::before
             width: 80%
             height: 80%
-        &.proficiency-50::before
+        &.proficiency-50 .content::before
             width: 75%
             height: 75%
-        &.proficiency-40::before
+        &.proficiency-40 .content::before
             width: 70%
             height: 70%
-        &.proficiency-30::before
+        &.proficiency-30 .content::before
             width: 65%
             height: 65%
-        &.proficiency-20::before
+        &.proficiency-20 .content::before
             width: 60%
             height: 60%
-        &.proficiency-10::before
+        &.proficiency-10 .content::before
             width: 55%
             height: 55%
-        &.proficiency-0::before
+        &.proficiency-0 .content::before
             width: 50%
             height: 50%
     .masonry

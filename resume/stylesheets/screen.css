@@ -319,7 +319,7 @@ body {
   background: #EEE;
   width: 200px;
   height: 200px;
-  margin: 0 auto;
+  margin: 0 auto 1em auto;
   display: block;
   position: relative;
   text-align: center;

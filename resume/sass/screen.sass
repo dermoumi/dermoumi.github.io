@@ -1,6 +1,7 @@
 @import compass/reset
 @import compass/css3/columns
 @import compass/css3/border-radius
+@import compass/css3/transform
 
 $accent-1: #D72E2E
 $accent-2: #00A6C9
@@ -50,22 +51,8 @@ body
 
 .item
     display: inline-block
-    margin: 0 0 1em
+    margin: 0 0 2em 0
     width: 100%
-    details
-        summary
-            position: relative
-        summary::-webkit-details-marker
-            display: none
-        summary::after
-            content: "+"
-            width: 20px
-            display: block
-            position: absolute
-            right: 0
-            top: 0
-        &[open] summary::after
-            content: "-"
 
 #skills
     .item
@@ -109,7 +96,8 @@ body
                     display: block
                     content: " "
                     background: #999
-                    left: .75em
+                    top: .45em
+                    left: .7em
                     margin: .1em
                     width: .5em
                     height: .5em
@@ -122,7 +110,7 @@ body
                 left: 1em
                 z-index: -1
                 background: #999
-                width: 4px
+                width: 2px
                 height: 100%
     .item.proficiency-100
         h3 span::after
@@ -180,17 +168,91 @@ body
         h3::after
             width: 0
 
+#languages
+    .item
+        +border-radius(100%, 100%)
+        background: #EEE
+        width: 200px
+        height: 200px
+        margin: 0 auto
+        display: block
+        position: relative
+        text-align: center
+        color: #FFF
+        .content
+            +translate(-50%, -50%)
+            top: 50%
+            left: 50%
+            position: absolute
+            z-index: 1
+            width: 100%
+            h3
+                font-size: 1.6em
+            p
+                font-size: .9em
+                color: #CCC
+                line-height: 1
+        &::before
+            +border-radius(100%, 100%)
+            +translate(-50%, -50%)
+            top: 50%
+            left: 50%
+            content: " "
+            position: absolute
+            z-index: 0
+            width: 0
+            height: 0
+            display: block
+            background: #888
+        &.proficiency-100::before
+            width: 100%
+            height: 100%
+        &.proficiency-90::before
+            width: 95%
+            height: 95%
+        &.proficiency-80::before
+            width: 90%
+            height: 90%
+        &.proficiency-70::before
+            width: 85%
+            height: 85%
+        &.proficiency-60::before
+            width: 80%
+            height: 80%
+        &.proficiency-50::before
+            width: 75%
+            height: 75%
+        &.proficiency-40::before
+            width: 70%
+            height: 70%
+        &.proficiency-30::before
+            width: 65%
+            height: 65%
+        &.proficiency-20::before
+            width: 60%
+            height: 60%
+        &.proficiency-10::before
+            width: 55%
+            height: 55%
+        &.proficiency-0::before
+            width: 50%
+            height: 50%
+    .masonry
+        @media (min-width: 1024px)
+            +columns(1em 3)
+
 section
     max-width: 1400px
     margin: 0 auto
     padding: 10px 20px
+    font-size: 2em
     h2
         padding: 0 20px
-        font-size: 3.6em
+        font-size: 1.8em
         color: $accent-2
         border-bottom: 3px solid $accent-2
-    ul.skills
-        font-size: 2em
+        font-variant: small-caps
+
 
 @media (min-width: $break-width + 1px)
     #info

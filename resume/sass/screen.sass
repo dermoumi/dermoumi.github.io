@@ -52,11 +52,13 @@ body
 
 .item
     display: inline-block
-    margin: 0 0 2em 0
     width: 100%
 
 #skills
+    .item-list
+        margin-bottom: -2em
     .item
+        margin: 0 0 1em 0
         h3
             +border-radius(3px, 3px)
             background: #EEE
@@ -97,7 +99,7 @@ body
                     display: block
                     content: " "
                     background: #999
-                    top: .45em
+                    top: .55em
                     left: .7em
                     margin: .1em
                     width: .5em
@@ -169,6 +171,63 @@ body
         h3::after
             width: 0
 
+#education
+    .item-list
+        position: relative
+        margin-top: 2em
+        &::before
+            position: absolute
+            content: " "
+            display: block
+            top: 0
+            left: 0
+            width: 20%
+            height: 1em
+            margin-top: -1em
+            margin-left: 40px
+            border-right: 2px dotted $accent-1
+        &::after
+            +border-bottom-left-radius(2px)
+            +border-bottom-right-radius(2px)
+            position: absolute
+            top: 0
+            left: 20%
+            margin-left: 40px
+            content: " "
+            background: $accent-1
+            display: block
+            width: 2px
+            height: 100%
+    .item
+        margin: 10px 20px
+        white-space: nowrap
+        position: relative
+    .years
+        position: absolute
+        top: 0
+        right: 80%
+        display: inline-block
+        width: 20%
+        text-transform: uppercase
+        text-align: right
+        color: #888
+        direction: rtl
+    .what
+        position: relative
+        left: 20%
+        display: inline-block
+        margin-left: 40px
+        &::before
+            +border-radius(100%, 100%)
+            position: absolute
+            content: " "
+            top: .5em
+            left: -24px
+            width: 10px
+            height: 10px
+            background: $accent-1
+            display: block
+
 #languages
     .masonry
         text-align: center
@@ -195,15 +254,6 @@ body
             display: block
             background: #EEE
         .content
-            position: relative
-            z-index: 1
-            width: 100%
-            h3
-                font-size: 1.6em
-            p
-                font-size: .9em
-                color: #CCC
-                line-height: 1
             &::before
                 +border-radius(100%, 100%)
                 +translate(-50%, -50%)
@@ -214,6 +264,15 @@ body
                 z-index: -1
                 display: block
                 background: #888
+            position: relative
+            z-index: 1
+            width: 100%
+            h3
+                font-size: 1.6em
+            p
+                font-size: .9em
+                color: #CCC
+                line-height: 1
         &.proficiency-100 .content::before
             width: 200px
             height: 200px
@@ -255,7 +314,7 @@ section
     max-width: 1400px
     margin: 0 auto
     padding: 10px 20px
-    font-size: 2em
+    font-size: 2.2em
     h2
         padding: 0 20px
         font-size: 1.8em

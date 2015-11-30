@@ -202,6 +202,17 @@ body
         margin: 10px 20px
         white-space: nowrap
         position: relative
+        &::before
+            +border-radius(100%, 100%)
+            position: absolute
+            content: " "
+            top: .5em
+            left: 20%
+            margin-left: 16px
+            width: 10px
+            height: 10px
+            background: $accent-1
+            display: block
     .years
         position: absolute
         top: 0
@@ -210,23 +221,37 @@ body
         width: 20%
         text-transform: uppercase
         text-align: right
-        color: #888
+        color: $accent-1
         direction: rtl
     .what
         position: relative
         left: 20%
         display: inline-block
         margin-left: 40px
-        &::before
-            +border-radius(100%, 100%)
-            position: absolute
-            content: " "
-            top: .5em
-            left: -24px
-            width: 10px
-            height: 10px
-            background: $accent-1
-            display: block
+    @media (max-width: $break-width)
+        .item-list::after
+            margin-left: 20px
+            left: 0
+        .item-list::before
+            margin-left: 20px
+            width: 0
+        .item-list
+            padding: 0 30px 0 0
+        .item
+            white-space: normal
+            &::before
+                left: 0
+                margin-left: -4px
+            .years
+                position: inherit
+                right: 0
+                direction: ltr
+                width: auto
+                margin-left: 20px
+            .what
+                position: inherit
+                left: 0
+                margin-left: 20px
 
 #languages
     .masonry

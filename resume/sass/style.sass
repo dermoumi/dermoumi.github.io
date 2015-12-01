@@ -107,8 +107,59 @@ h1, h2, h3
         &.tel::before
             background-position: 0    16px
 
-section
-    h2
-        font-size: 2em
-        padding: 3px 16px
-        border-bottom: 3px solid $col2
+section h2
+    font-size: 2em
+    padding: 3px 16px
+    margin-bottom: 10px
+    border-bottom: 3px solid $col2
+
+.item-list
+    padding: 0 16px
+    font-size: 1.2em
+    margin-bottom: 1.5em
+
+#education
+    .item-list
+        margin-top: 2em
+        position: relative
+        height: auto
+        padding: 0
+    .item-list::before
+        content: " "
+        display: block
+        width: 20%
+        height: 1em
+        padding-right: 14px
+        border-right: 2px dotted $col2
+        margin-top: -1em
+    .item-list::after
+        content: " "
+        display: block
+        position: absolute
+        top: 1em
+        left: 0
+        width: 20%
+        height: 100%
+        padding-right: 14px
+        border-right: 2px solid $col2
+    .item
+        position: relative
+        margin: 14px 0
+        line-height: 1.3em
+    .years
+        text-transform: uppercase
+        color: $col2
+        position: absolute
+        right: 80%
+    .what
+        padding-left: 30px
+        display: block
+        margin-left: 20%
+    .years::after
+        +border-radius(100%, 100%)
+        content: " "
+        display: inline-block
+        background: $col2
+        width: 10px
+        height: 10px
+        margin: 0 -20px 0 10px

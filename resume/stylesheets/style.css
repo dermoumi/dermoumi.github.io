@@ -205,9 +205,78 @@ h1, h2, h3 {
   background-position: 0 16px;
 }
 
-/* line 111, ../sass/style.sass */
+/* line 110, ../sass/style.sass */
 section h2 {
   font-size: 2em;
   padding: 3px 16px;
+  margin-bottom: 10px;
   border-bottom: 3px solid #CD292D;
+}
+
+/* line 116, ../sass/style.sass */
+.item-list {
+  padding: 0 16px;
+  font-size: 1.2em;
+  margin-bottom: 1.5em;
+}
+
+/* line 122, ../sass/style.sass */
+#education .item-list {
+  margin-top: 2em;
+  position: relative;
+  height: auto;
+  padding: 0;
+}
+/* line 127, ../sass/style.sass */
+#education .item-list::before {
+  content: " ";
+  display: block;
+  width: 20%;
+  height: 1em;
+  padding-right: 14px;
+  border-right: 2px dotted #CD292D;
+  margin-top: -1em;
+}
+/* line 135, ../sass/style.sass */
+#education .item-list::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 1em;
+  left: 0;
+  width: 20%;
+  height: 100%;
+  padding-right: 14px;
+  border-right: 2px solid #CD292D;
+}
+/* line 145, ../sass/style.sass */
+#education .item {
+  position: relative;
+  margin: 14px 0;
+  line-height: 1.3em;
+}
+/* line 149, ../sass/style.sass */
+#education .years {
+  text-transform: uppercase;
+  color: #CD292D;
+  position: absolute;
+  right: 80%;
+}
+/* line 154, ../sass/style.sass */
+#education .what {
+  padding-left: 30px;
+  display: block;
+  margin-left: 20%;
+}
+/* line 158, ../sass/style.sass */
+#education .years::after {
+  -moz-border-radius: 100% / 100%;
+  -webkit-border-radius: 100% 100%;
+  border-radius: 100% / 100%;
+  content: " ";
+  display: inline-block;
+  background: #CD292D;
+  width: 10px;
+  height: 10px;
+  margin: 0 -20px 0 10px;
 }

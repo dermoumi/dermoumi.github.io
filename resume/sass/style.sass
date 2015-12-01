@@ -4,10 +4,13 @@
 @import compass/css3/flexbox
 @import compass/reset
 
-$col1: #FBE087
+$col1: #1F1F1F
 $col2: #CD292D
 $col3: #0B3D69
 $col4: #1F1F24
+
+$main-font: 'Lolita Medium', sans-serif
+$titles-font: 'Springsteel Serif', serif
 
 @font-face
     font-family: 'Lolita Medium'
@@ -24,14 +27,14 @@ $col4: #1F1F24
     font-style: normal
 
 @page
-    size: 1280px 1810px
+    size: 1280px auto
 
 body
-    font-family: 'Lolita Medium', sans-serif
+    font-family: $main-font
     color: $col4
 
 h1, h2, h3
-    font-family: 'Springsteel Serif', serif
+    font-family: $titles-font
 
 .container
     max-width: 960px
@@ -59,7 +62,6 @@ h1, h2, h3
     margin-bottom: 1.4em
     @media print
         height: 360px
-
 .picture-container
     height: 100%
     width: 100%
@@ -117,6 +119,30 @@ section h2
     padding: 0 16px
     font-size: 1.2em
     margin-bottom: 1.5em
+
+#skills
+    .item
+        line-height: 1.4em
+        margin-bottom: 10px
+        .tools
+            padding: 0 10px
+        .tools li
+            float: left
+            width: 50%
+        .tools:after
+            content: " "
+            clear: both
+            display: table
+        h3
+            color: $col2
+        .efficiency
+            font-weight: thin
+            margin-left: 10px
+            color: $col1
+        .efficiency::before
+            content: "("
+        .efficiency::after
+            content: ")"
 
 #education
     .item-list

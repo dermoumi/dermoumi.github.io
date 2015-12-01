@@ -2,6 +2,7 @@
 @import compass/css3/border-radius
 @import compass/css3/transform
 @import compass/css3/flexbox
+@import compass/reset
 
 $col1: #FBE087
 $col2: #CD292D
@@ -23,7 +24,7 @@ $col4: #1F1F24
     font-style: normal
 
 @page
-    size: 1440px 1864px
+    size: 1280px 1810px
 
 body
     font-family: 'Lolita Medium', sans-serif
@@ -32,19 +33,40 @@ body
 h1, h2, h3
     font-family: 'Springsteel Serif', serif
 
+.container
+    max-width: 960px
+    margin: 0 auto
+    padding: 0 20px
+
+.column
+    width: 100%
+    float: left
+
+.one-half
+    width: 48%
+.one-half:first-child
+    margin-right: 4%
+
+.row::after
+    content: " "
+    display: table
+    clear: both
+
 #info
     height: 480px
     position: relative
     border-bottom: 5px solid $col2
+    margin-bottom: 1.4em
     @media print
         height: 360px
 
 .picture-container
     height: 100%
     width: 100%
-    max-width: 1000px
+    max-width: 960px
     margin: 0 auto
     text-align: right
+    padding: 0 20px
     img
         width: auto
         height: 100%
@@ -84,3 +106,9 @@ h1, h2, h3
             background-position: 32px 16px
         &.tel::before
             background-position: 0    16px
+
+section
+    h2
+        font-size: 2em
+        padding: 3px 16px
+        border-bottom: 3px solid $col2

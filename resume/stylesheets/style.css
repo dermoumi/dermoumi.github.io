@@ -1,3 +1,68 @@
+/* line 5, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
 @font-face {
   font-family: "Lolita Medium";
   src: url("../fonts/Lolita-Medium-webfont.eot");
@@ -13,60 +78,92 @@
   font-style: normal;
 }
 @page {
-  size: 1440px 1864px;
+  size: 1280px 1810px;
 }
-/* line 28, ../sass/style.sass */
+/* line 29, ../sass/style.sass */
 body {
   font-family: "Lolita Medium", sans-serif;
   color: #1F1F24;
 }
 
-/* line 32, ../sass/style.sass */
+/* line 33, ../sass/style.sass */
 h1, h2, h3 {
   font-family: "Springsteel Serif", serif;
 }
 
-/* line 35, ../sass/style.sass */
+/* line 36, ../sass/style.sass */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* line 41, ../sass/style.sass */
+.column {
+  width: 100%;
+  float: left;
+}
+
+/* line 45, ../sass/style.sass */
+.one-half {
+  width: 48%;
+}
+
+/* line 47, ../sass/style.sass */
+.one-half:first-child {
+  margin-right: 4%;
+}
+
+/* line 50, ../sass/style.sass */
+.row::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+/* line 55, ../sass/style.sass */
 #info {
   height: 480px;
   position: relative;
   border-bottom: 5px solid #CD292D;
+  margin-bottom: 1.4em;
 }
 @media print {
-  /* line 35, ../sass/style.sass */
+  /* line 55, ../sass/style.sass */
   #info {
     height: 360px;
   }
 }
 
-/* line 42, ../sass/style.sass */
+/* line 63, ../sass/style.sass */
 .picture-container {
   height: 100%;
   width: 100%;
-  max-width: 1000px;
+  max-width: 960px;
   margin: 0 auto;
   text-align: right;
+  padding: 0 20px;
 }
-/* line 48, ../sass/style.sass */
+/* line 70, ../sass/style.sass */
 .picture-container img {
   width: auto;
   height: 100%;
   margin: 0 30px;
 }
 
-/* line 52, ../sass/style.sass */
+/* line 74, ../sass/style.sass */
 .general-info {
   position: absolute;
   top: 20%;
   left: 0;
   width: 100%;
 }
-/* line 57, ../sass/style.sass */
+/* line 79, ../sass/style.sass */
 .general-info h1, .general-info h3, .general-info address {
   width: 100%;
   margin: 0 auto;
 }
-/* line 60, ../sass/style.sass */
+/* line 82, ../sass/style.sass */
 .general-info h1 {
   font-size: 3.6em;
   font-variant: small-caps;
@@ -74,19 +171,19 @@ h1, h2, h3 {
   padding: 7px 20px;
   max-width: 860px;
 }
-/* line 66, ../sass/style.sass */
+/* line 88, ../sass/style.sass */
 .general-info h3 {
   font-size: 2em;
   max-width: 820px;
   padding: 7px 40px;
 }
-/* line 70, ../sass/style.sass */
+/* line 92, ../sass/style.sass */
 .general-info address {
   font-size: 1.2em;
   max-width: 820px;
   padding: 7px 40px;
 }
-/* line 74, ../sass/style.sass */
+/* line 96, ../sass/style.sass */
 .general-info address::before {
   content: " ";
   display: inline-block;
@@ -95,15 +192,22 @@ h1, h2, h3 {
   height: 16px;
   margin: 0 10px;
 }
-/* line 81, ../sass/style.sass */
+/* line 103, ../sass/style.sass */
 .general-info address.home::before {
   background-position: 16px 16px;
 }
-/* line 83, ../sass/style.sass */
+/* line 105, ../sass/style.sass */
 .general-info address.email::before {
   background-position: 32px 16px;
 }
-/* line 85, ../sass/style.sass */
+/* line 107, ../sass/style.sass */
 .general-info address.tel::before {
   background-position: 0 16px;
+}
+
+/* line 111, ../sass/style.sass */
+section h2 {
+  font-size: 2em;
+  padding: 3px 16px;
+  border-bottom: 3px solid #CD292D;
 }

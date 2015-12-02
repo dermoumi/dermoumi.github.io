@@ -1,0 +1,264 @@
+@import compass/reset
+@import compass/css3/columns
+@import compass/css3/border-radius
+
+$accent-1: #D72E2E
+$accent-2: #00A6C9
+
+$break-width: 700px
+$general-info-width: 900px
+
+body
+    font: 62.5% 'PT Sans Narrow', sans-serif
+    color: #333
+
+// Not sure if I'll use it just yet...
+.clear-fix:after
+    content: " "
+    visibility: hidden
+    display: block
+    clear: both
+
+#wrapper
+    min-width: 200px
+
+#info
+    h1
+        font-weight: bold
+        line-height: 1
+        font-variant: small-caps
+    address
+        font-size: 2em
+        line-height: 1.8em
+        padding-left: 36px
+        &::before
+            content: " "
+            background-image: url(../images/icons.svg)
+            display: inline-block
+            width: 16px
+            height: 16px
+            margin: 0 10px -3px -26px
+
+.masonry
+    padding: .75em
+    @media (min-width: 481px)
+        +columns(1em 2)
+    @media (min-width: 701px)
+        +columns(1em 3)
+    @media (min-width: 1024px)
+        +columns(1em 4)
+
+.item
+    display: inline-block
+    margin: 0 0 1em
+    width: 100%
+    details
+        summary
+            position: relative
+        summary::-webkit-details-marker
+            display: none
+        summary::after
+            content: "+"
+            width: 20px
+            display: block
+            position: absolute
+            right: 0
+            top: 0
+        &[open] summary::after
+            content: "-"
+
+#skills
+    .item
+        h3
+            +border-radius(3px, 3px)
+            background: #EEE
+            position: relative
+            font-size: 1.2em
+            font-weight: bold
+            color: #FFF
+        h3 span
+            display: block
+            padding: .2em 1em
+            position: relative
+            z-index: 1
+            &::after
+                color: #000
+                font-weight: normal
+                opacity: .7
+                margin-left: .5em
+        h3::after
+            +border-radius(3px, 3px)
+            content: " "
+            position: absolute
+            top: 0
+            left: 0
+            width: 0
+            height: 100%
+            background: #999
+            z-index: 0
+        ul
+            position: relative
+            height: 100%
+            li
+                line-height: 1em
+                position: relative
+                padding: .3em 2em
+                &::before
+                    +border-radius(100%, 100%)
+                    position: absolute
+                    display: block
+                    content: " "
+                    background: #999
+                    left: .75em
+                    margin: .1em
+                    width: .5em
+                    height: .5em
+            &::before
+                +border-bottom-left-radius(2px)
+                +border-bottom-right-radius(2px)
+                content: " "
+                position: absolute
+                top: 0
+                left: 1em
+                z-index: -1
+                background: #999
+                width: 4px
+                height: 100%
+    .item.proficiency-100
+        h3 span::after
+            content: "100%"
+        h3::after
+            width: 100%
+    .item.proficiency-90
+        h3 span::after
+            content: "90%"
+        h3::after
+            width: 90%
+    .item.proficiency-80
+        h3 span::after
+            content: "80%"
+        h3::after
+            width: 80%
+    .item.proficiency-70
+        h3 span::after
+            content: "70%"
+        h3::after
+            width: 70%
+    .item.proficiency-60
+        h3 span::after
+            content: "60%"
+        h3::after
+            width: 60%
+    .item.proficiency-50
+        h3 span::after
+            content: "50%"
+        h3::after
+            width: 50%
+    .item.proficiency-40
+        h3 span::after
+            content: "40%"
+        h3::after
+            width: 40%
+    .item.proficiency-30
+        h3 span::after
+            content: "30%"
+        h3::after
+            width: 30%
+    .item.proficiency-20
+        h3 span::after
+            content: "20%"
+        h3::after
+            width: 20%
+    .item.proficiency-10
+        h3 span::after
+            content: "10%"
+        h3::after
+            width: 10%
+    .item.proficiency-0
+        h3 span::after
+            content: "0%"
+        h3::after
+            width: 0
+
+section
+    max-width: 1400px
+    margin: 0 auto
+    padding: 10px 20px
+    h2
+        padding: 0 20px
+        font-size: 3.6em
+        color: $accent-2
+        border-bottom: 3px solid $accent-2
+    ul.skills
+        font-size: 2em
+
+@media (min-width: $break-width + 1px)
+    #info
+        height: 480px
+        position: relative
+        border-bottom: 5px solid $accent-1
+        .general-info
+            position: absolute
+            top: 100px
+            left: 0px
+            width: 100%
+            h1, h3, address
+                display: block
+                width: 100%
+                margin: 0 auto
+                padding: 0 20px
+                max-width: $general-info-width
+            address
+                padding: 0 20px
+                padding-left: 56px
+                max-width: $general-info-width - 36px
+            h1
+                font-size: 6em
+                color: $accent-1
+            h3
+                font-size: 3.2em
+            address
+                &.tel::before
+                    background-position: 0px 16px
+                &.home::before
+                    background-position: 16px 16px
+                &.email::before
+                    background-position: 32px 16px
+        .picture-container
+            height: 100%
+            width: 100%
+            max-width: 1000px
+            margin: 0 auto
+            img
+                width: auto
+                height: 100%
+                display: block
+                margin: 0 0 0 auto
+
+@media (max-width: $break-width)
+    .general-info
+        background: $accent-1
+        color: #FFF
+        padding: 10px
+        h1
+            font-size: 4.8em
+            line-height: 1
+            padding-left: 10px
+            color: #000
+        h3
+            font-size: 3em
+            color: $accent-1 - #999
+            padding-left: 10px
+            margin-bottom: 10px
+        address
+            &.home::before
+                background-position: 16px 0px
+            &.email::before
+                background-position: 32px 0px
+    .picture-container
+        border-top: 4px solid $accent-1
+        width: 100%
+        line-height: 0
+        img
+            width: 100%
+            height: auto

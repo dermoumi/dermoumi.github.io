@@ -22,11 +22,13 @@ $col2: #CD292D
     font-style: normal
 
 @page
-    size: 1280px 1800px
+    size: 1152px 1630px
 
 body
     font-family: 'Lolita Medium', sans-serif
     color: $col1
+    @media print
+        margin-top: 60px
 
 h1, h2, h3
     font-family: 'Springsteel Serif', serif
@@ -38,7 +40,7 @@ a
 
 .container
     max-width: 960px
-    margin: 0 auto
+    margin: 0 auto 2em auto
     padding: 0 20px
     font-size: 1.1em
 

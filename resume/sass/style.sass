@@ -6,11 +6,6 @@
 
 $col1: #1F1F1F
 $col2: #CD292D
-$col3: #0B3D69
-$col4: #1F1F24
-
-$main-font: 'Lolita Medium', sans-serif
-$titles-font: 'Springsteel Serif', serif
 
 @font-face
     font-family: 'Lolita Medium'
@@ -27,19 +22,25 @@ $titles-font: 'Springsteel Serif', serif
     font-style: normal
 
 @page
-    size: 1280px auto
+    size: 1280px 1800px
 
 body
-    font-family: $main-font
-    color: $col4
+    font-family: 'Lolita Medium', sans-serif
+    color: $col1
 
 h1, h2, h3
-    font-family: $titles-font
+    font-family: 'Springsteel Serif', serif
+
+a
+    color: $col2
+    border-bottom: 1px dotted $col2
+    text-decoration: none
 
 .container
     max-width: 960px
     margin: 0 auto
     padding: 0 20px
+    font-size: 1.1em
 
 .column
     width: 100%
@@ -47,8 +48,15 @@ h1, h2, h3
 
 .one-half
     width: 48%
+    margin-left: 4%
 .one-half:first-child
-    margin-right: 4%
+    margin-left: 0
+
+.one-sixth
+    width: 13.3333%
+    margin-left: 4%
+.one-sixth:first-child
+    margin-left: 0
 
 .row::after
     content: " "
@@ -59,7 +67,7 @@ h1, h2, h3
     height: 480px
     position: relative
     border-bottom: 5px solid $col2
-    margin-bottom: 1.4em
+    margin-bottom: 2em
     @media print
         height: 360px
 .picture-container
@@ -103,11 +111,11 @@ h1, h2, h3
             height: 16px
             margin: 0 10px
         &.home::before
-            background-position: 16px 16px
+            background-position: -32px 16px
         &.email::before
-            background-position: 32px 16px
+            background-position: -16px 16px
         &.tel::before
-            background-position: 0    16px
+            background-position: 0px 16px
 
 section h2
     font-size: 2em
@@ -122,7 +130,6 @@ section h2
 
 #skills
     .item
-        line-height: 1.4em
         margin-bottom: 10px
         .tools
             padding: 0 10px
@@ -133,18 +140,17 @@ section h2
             content: " "
             clear: both
             display: table
-        h3
-            color: $col2
-        .efficiency
-            font-weight: thin
-            margin-left: 10px
-            color: $col1
-        .efficiency::before
-            content: "("
-        .efficiency::after
-            content: ")"
 
-#education
+#skills, #languages
+    .item
+        line-height: 1.6em      
+    h3
+        color: $col2
+    .proficiency
+        font-weight: thin
+        color: $col1
+
+#education, #experience
     .item-list
         margin-top: 2em
         position: relative
@@ -189,3 +195,29 @@ section h2
         width: 10px
         height: 10px
         margin: 0 -20px 0 10px
+
+#interests
+    .item
+        text-align: center
+        &::before
+            +border-radius(100%, 100%)
+            content: " "
+            display: block
+            margin: .5em auto
+            width: 72px
+            height: 72px
+            background-color: $col1
+            background-image: url(../images/icons.svg)
+        &.music::before
+            background-position: -72*0px 0
+        &.doodling::before
+            background-position: -72*1px 0
+        &.video-games::before
+            background-position: -72*2px 0
+        &.reading::before
+            background-position: -72*3px 0
+        &.puzzles::before
+            background-position: -72*4px 0
+        &.science::before
+            background-position: -72*5px 0
+

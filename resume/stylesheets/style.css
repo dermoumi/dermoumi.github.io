@@ -88,7 +88,7 @@ body {
 @media print {
   /* line 27, ../sass/style.sass */
   body {
-    margin-top: 60px;
+    margin-top: 6 0px;
   }
 }
 
@@ -363,7 +363,7 @@ section h2 {
   background-position: 0px 0;
 }
 /* line 215, ../sass/style.sass */
-#interests .item.doodling::before {
+#interests .item.art::before {
   background-position: -72px 0;
 }
 /* line 217, ../sass/style.sass */

@@ -273,30 +273,50 @@ a {
   #info .picture-container {
     padding: 0;
     line-height: 0;
+    border-top: 5px solid #CD292D;
   }
-  /* line 143, ../sass/style.sass */
+  /* line 144, ../sass/style.sass */
   #info .picture-container img {
     height: auto;
     width: 100%;
     margin: 0;
   }
-  /* line 147, ../sass/style.sass */
+  /* line 148, ../sass/style.sass */
   #info .general-info {
+    padding: 1em 0;
     position: relative;
     background-color: #CD292D;
     color: #FFF;
   }
-  /* line 151, ../sass/style.sass */
+  /* line 153, ../sass/style.sass */
   #info .general-info h1 {
     color: inherit;
   }
-  /* line 153, ../sass/style.sass */
-  #info .general-info h1, #info .general-info h3, #info .general-info address {
+  /* line 155, ../sass/style.sass */
+  #info .general-info h1, #info .general-info h3 {
+    padding: 7px 20px;
     width: auto;
+  }
+  /* line 158, ../sass/style.sass */
+  #info .general-info address {
+    padding: 7px 60px;
+    width: auto;
+  }
+  /* line 161, ../sass/style.sass */
+  #info .general-info address.home::before {
+    background-position: -80px 16px;
+  }
+  /* line 163, ../sass/style.sass */
+  #info .general-info address.email::before {
+    background-position: -64px 16px;
+  }
+  /* line 165, ../sass/style.sass */
+  #info .general-info address.tel::before {
+    background-position: -48px 16px;
   }
 }
 
-/* line 156, ../sass/style.sass */
+/* line 168, ../sass/style.sass */
 #language-selection {
   font-size: 1.2em;
   max-width: 760px;
@@ -305,18 +325,18 @@ a {
   display: block;
   text-align: right;
 }
-/* line 163, ../sass/style.sass */
+/* line 175, ../sass/style.sass */
 #language-selection em {
   font-weight: bolder;
 }
 @media print {
-  /* line 156, ../sass/style.sass */
+  /* line 168, ../sass/style.sass */
   #language-selection {
     display: none;
   }
 }
 
-/* line 168, ../sass/style.sass */
+/* line 180, ../sass/style.sass */
 section h2 {
   font-size: 2em;
   padding: 3px 16px;
@@ -324,57 +344,57 @@ section h2 {
   border-bottom: 3px solid #CD292D;
 }
 
-/* line 174, ../sass/style.sass */
+/* line 186, ../sass/style.sass */
 .item-list {
   padding: 0 16px;
   font-size: 1.2em;
   margin-bottom: 1.5em;
 }
 
-/* line 180, ../sass/style.sass */
+/* line 192, ../sass/style.sass */
 #skills .item {
   margin-bottom: 10px;
 }
-/* line 182, ../sass/style.sass */
+/* line 194, ../sass/style.sass */
 #skills .item .tools {
   padding: 0 10px;
 }
-/* line 184, ../sass/style.sass */
+/* line 196, ../sass/style.sass */
 #skills .item .tools li {
   float: left;
   width: 50%;
   line-height: 1em;
   margin: 5px 0;
 }
-/* line 189, ../sass/style.sass */
-#skills .item .tools:after {
+/* line 201, ../sass/style.sass */
+#skills .item .tools::after {
   content: " ";
   clear: both;
   display: table;
 }
 
-/* line 195, ../sass/style.sass */
+/* line 207, ../sass/style.sass */
 #skills .item, #languages .item {
   line-height: 1.6em;
 }
-/* line 197, ../sass/style.sass */
+/* line 209, ../sass/style.sass */
 #skills h3, #languages h3 {
   color: #CD292D;
 }
-/* line 199, ../sass/style.sass */
+/* line 211, ../sass/style.sass */
 #skills .proficiency, #languages .proficiency {
   font-weight: thin;
   color: #1F1F1F;
 }
 
-/* line 204, ../sass/style.sass */
+/* line 216, ../sass/style.sass */
 #education .item-list, #experience .item-list {
   margin-top: 2em;
   position: relative;
   height: auto;
   padding: 0;
 }
-/* line 209, ../sass/style.sass */
+/* line 221, ../sass/style.sass */
 #education .item-list::before, #experience .item-list::before {
   content: " ";
   display: block;
@@ -384,7 +404,7 @@ section h2 {
   border-right: 2px dotted #CD292D;
   margin-top: -1em;
 }
-/* line 217, ../sass/style.sass */
+/* line 229, ../sass/style.sass */
 #education .item-list::after, #experience .item-list::after {
   content: " ";
   display: block;
@@ -396,13 +416,13 @@ section h2 {
   padding-right: 14px;
   border-right: 2px solid #CD292D;
 }
-/* line 227, ../sass/style.sass */
+/* line 239, ../sass/style.sass */
 #education .item, #experience .item {
   position: relative;
   margin: 14px 0;
   line-height: 1.3em;
 }
-/* line 231, ../sass/style.sass */
+/* line 243, ../sass/style.sass */
 #education .years, #experience .years {
   text-transform: uppercase;
   color: #CD292D;
@@ -410,13 +430,13 @@ section h2 {
   right: 80%;
   text-align: right;
 }
-/* line 238, ../sass/style.sass */
+/* line 250, ../sass/style.sass */
 #education .what, #experience .what {
   padding-left: 30px;
   display: block;
   margin-left: 20%;
 }
-/* line 242, ../sass/style.sass */
+/* line 254, ../sass/style.sass */
 #education .what::before, #experience .what::before {
   -moz-border-radius: 100% / 100%;
   -webkit-border-radius: 100% 100%;
@@ -429,21 +449,21 @@ section h2 {
   margin: 0 10px 0 -20px;
 }
 @media screen and (max-width: 420px) {
-  /* line 251, ../sass/style.sass */
+  /* line 263, ../sass/style.sass */
   #education .item-list::before, #education .item-list::after, #experience .item-list::before, #experience .item-list::after {
     width: 10px;
   }
-  /* line 253, ../sass/style.sass */
+  /* line 265, ../sass/style.sass */
   #education .item, #experience .item {
     margin-left: 40px;
   }
-  /* line 255, ../sass/style.sass */
+  /* line 267, ../sass/style.sass */
   #education .years, #experience .years {
     position: relative;
     right: 0;
     padding-right: 10px;
   }
-  /* line 259, ../sass/style.sass */
+  /* line 271, ../sass/style.sass */
   #education .years::before, #experience .years::before {
     -moz-border-radius: 100% / 100%;
     -webkit-border-radius: 100% 100%;
@@ -455,28 +475,28 @@ section h2 {
     height: 10px;
     margin: 0 10px 0 -20px;
   }
-  /* line 267, ../sass/style.sass */
+  /* line 279, ../sass/style.sass */
   #education .years.hidden, #experience .years.hidden {
     padding-right: 0;
   }
-  /* line 269, ../sass/style.sass */
+  /* line 281, ../sass/style.sass */
   #education .what, #experience .what {
     padding: 0;
     margin: 0;
     display: inline;
   }
-  /* line 273, ../sass/style.sass */
+  /* line 285, ../sass/style.sass */
   #education .what::before, #experience .what::before {
     display: none;
   }
 }
 
-/* line 277, ../sass/style.sass */
+/* line 289, ../sass/style.sass */
 #interests .item {
   text-align: center;
   margin-bottom: 1em;
 }
-/* line 280, ../sass/style.sass */
+/* line 292, ../sass/style.sass */
 #interests .item::before {
   -moz-border-radius: 100% / 100%;
   -webkit-border-radius: 100% 100%;
@@ -489,27 +509,27 @@ section h2 {
   background-color: #1F1F1F;
   background-image: url(../images/icons.svg);
 }
-/* line 289, ../sass/style.sass */
+/* line 301, ../sass/style.sass */
 #interests .item.music::before {
   background-position: 0px 0;
 }
-/* line 291, ../sass/style.sass */
+/* line 303, ../sass/style.sass */
 #interests .item.art::before {
   background-position: -72px 0;
 }
-/* line 293, ../sass/style.sass */
+/* line 305, ../sass/style.sass */
 #interests .item.video-games::before {
   background-position: -144px 0;
 }
-/* line 295, ../sass/style.sass */
+/* line 307, ../sass/style.sass */
 #interests .item.reading::before {
   background-position: -216px 0;
 }
-/* line 297, ../sass/style.sass */
+/* line 309, ../sass/style.sass */
 #interests .item.puzzles::before {
   background-position: -288px 0;
 }
-/* line 299, ../sass/style.sass */
+/* line 311, ../sass/style.sass */
 #interests .item.science::before {
   background-position: -360px 0;
 }

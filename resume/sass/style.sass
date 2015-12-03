@@ -140,18 +140,30 @@ a
         .picture-container
             padding: 0
             line-height: 0
+            border-top: 5px solid $col2
             img
                 height: auto
                 width: 100%
                 margin: 0
         .general-info
+            padding: 1em 0
             position: relative
             background-color: $col2
             color: #FFF
             h1
                 color: inherit
-            h1, h3, address
+            h1, h3
+                padding: 7px 20px
                 width: auto
+            address
+                padding: 7px 60px
+                width: auto
+                &.home::before
+                    background-position: -80px 16px
+                &.email::before
+                    background-position: -64px 16px
+                &.tel::before
+                    background-position: -48px 16px
 
 #language-selection
     font-size: 1.2em
@@ -186,7 +198,7 @@ section h2
             width: 50%
             line-height: 1em
             margin: 5px 0
-        .tools:after
+        .tools::after
             content: " "
             clear: both
             display: table

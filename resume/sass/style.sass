@@ -123,6 +123,9 @@ a
             line-height: 1.2em
             max-width: 740px
             padding: 7px 80px
+            a
+                border: none
+                color: inherit
             &::before
                 content: " "
                 display: inline-block
@@ -195,9 +198,11 @@ section h2
             padding: 0 10px
         .tools li
             float: left
-            width: 50%
+            width: 48%
             line-height: 1em
-            margin: 5px 0
+            margin: 5px 4% 5px 0
+        .tools li:first-child
+            margin-right: 0%
         .tools::after
             content: " "
             clear: both

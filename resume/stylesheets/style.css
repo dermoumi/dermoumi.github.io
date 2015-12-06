@@ -364,46 +364,48 @@ section h2 {
 #skills .item .tools {
   padding: 0 10px;
 }
-/* line 199, ../sass/style.sass */
+/* line 200, ../sass/style.sass */
 #skills .item .tools li {
   float: left;
   width: 48%;
   line-height: 1em;
-  margin: 5px 4% 5px 0;
+  margin: 5px 0 5px 4%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-/* line 204, ../sass/style.sass */
-#skills .item .tools li:first-child {
-  margin-right: 0%;
+/* line 207, ../sass/style.sass */
+#skills .item .tools li:nth-child(odd) {
+  margin-left: 0;
 }
-/* line 206, ../sass/style.sass */
+/* line 209, ../sass/style.sass */
 #skills .item .tools::after {
   content: " ";
   clear: both;
   display: table;
 }
 
-/* line 212, ../sass/style.sass */
+/* line 215, ../sass/style.sass */
 #skills .item, #languages .item {
   line-height: 1.6em;
 }
-/* line 214, ../sass/style.sass */
+/* line 217, ../sass/style.sass */
 #skills h3, #languages h3 {
   color: #CD292D;
 }
-/* line 216, ../sass/style.sass */
+/* line 219, ../sass/style.sass */
 #skills .proficiency, #languages .proficiency {
   font-weight: thin;
   color: #1F1F1F;
 }
 
-/* line 221, ../sass/style.sass */
+/* line 224, ../sass/style.sass */
 #education .item-list, #experience .item-list {
   margin-top: 2em;
   position: relative;
   height: auto;
   padding: 0;
 }
-/* line 226, ../sass/style.sass */
+/* line 229, ../sass/style.sass */
 #education .item-list::before, #experience .item-list::before {
   content: " ";
   display: block;
@@ -413,7 +415,7 @@ section h2 {
   border-right: 2px dotted #CD292D;
   margin-top: -1em;
 }
-/* line 234, ../sass/style.sass */
+/* line 237, ../sass/style.sass */
 #education .item-list::after, #experience .item-list::after {
   content: " ";
   display: block;
@@ -425,13 +427,13 @@ section h2 {
   padding-right: 14px;
   border-right: 2px solid #CD292D;
 }
-/* line 244, ../sass/style.sass */
+/* line 247, ../sass/style.sass */
 #education .item, #experience .item {
   position: relative;
   margin: 14px 0;
   line-height: 1.3em;
 }
-/* line 248, ../sass/style.sass */
+/* line 251, ../sass/style.sass */
 #education .years, #experience .years {
   text-transform: uppercase;
   color: #CD292D;
@@ -439,13 +441,13 @@ section h2 {
   right: 80%;
   text-align: right;
 }
-/* line 255, ../sass/style.sass */
+/* line 258, ../sass/style.sass */
 #education .what, #experience .what {
   padding-left: 30px;
   display: block;
   margin-left: 20%;
 }
-/* line 259, ../sass/style.sass */
+/* line 262, ../sass/style.sass */
 #education .what::before, #experience .what::before {
   -moz-border-radius: 100% / 100%;
   -webkit-border-radius: 100% 100%;
@@ -458,21 +460,21 @@ section h2 {
   margin: 0 10px 0 -20px;
 }
 @media screen and (max-width: 420px) {
-  /* line 268, ../sass/style.sass */
+  /* line 271, ../sass/style.sass */
   #education .item-list::before, #education .item-list::after, #experience .item-list::before, #experience .item-list::after {
     width: 10px;
   }
-  /* line 270, ../sass/style.sass */
+  /* line 273, ../sass/style.sass */
   #education .item, #experience .item {
     margin-left: 40px;
   }
-  /* line 272, ../sass/style.sass */
+  /* line 275, ../sass/style.sass */
   #education .years, #experience .years {
     position: relative;
     right: 0;
     padding-right: 10px;
   }
-  /* line 276, ../sass/style.sass */
+  /* line 279, ../sass/style.sass */
   #education .years::before, #experience .years::before {
     -moz-border-radius: 100% / 100%;
     -webkit-border-radius: 100% 100%;
@@ -484,28 +486,28 @@ section h2 {
     height: 10px;
     margin: 0 10px 0 -20px;
   }
-  /* line 284, ../sass/style.sass */
+  /* line 287, ../sass/style.sass */
   #education .years.hidden, #experience .years.hidden {
     padding-right: 0;
   }
-  /* line 286, ../sass/style.sass */
+  /* line 289, ../sass/style.sass */
   #education .what, #experience .what {
     padding: 0;
     margin: 0;
     display: inline;
   }
-  /* line 290, ../sass/style.sass */
+  /* line 293, ../sass/style.sass */
   #education .what::before, #experience .what::before {
     display: none;
   }
 }
 
-/* line 294, ../sass/style.sass */
+/* line 297, ../sass/style.sass */
 #interests .item {
   text-align: center;
   margin-bottom: 1em;
 }
-/* line 297, ../sass/style.sass */
+/* line 300, ../sass/style.sass */
 #interests .item::before {
   -moz-border-radius: 100% / 100%;
   -webkit-border-radius: 100% 100%;
@@ -518,27 +520,27 @@ section h2 {
   background-color: #1F1F1F;
   background-image: url(../images/icons.svg);
 }
-/* line 306, ../sass/style.sass */
+/* line 309, ../sass/style.sass */
 #interests .item.music::before {
   background-position: 0px 0;
 }
-/* line 308, ../sass/style.sass */
+/* line 311, ../sass/style.sass */
 #interests .item.art::before {
   background-position: -72px 0;
 }
-/* line 310, ../sass/style.sass */
+/* line 313, ../sass/style.sass */
 #interests .item.video-games::before {
   background-position: -144px 0;
 }
-/* line 312, ../sass/style.sass */
+/* line 315, ../sass/style.sass */
 #interests .item.reading::before {
   background-position: -216px 0;
 }
-/* line 314, ../sass/style.sass */
+/* line 317, ../sass/style.sass */
 #interests .item.puzzles::before {
   background-position: -288px 0;
 }
-/* line 316, ../sass/style.sass */
+/* line 319, ../sass/style.sass */
 #interests .item.science::before {
   background-position: -360px 0;
 }

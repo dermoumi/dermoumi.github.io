@@ -2,7 +2,7 @@
 @import compass/reset
 
 $col1: #1F1F1F
-$col2: #CD292D
+$col2: #D32F2F
 
 @font-face
     font-family: 'Lolita Medium'
@@ -64,14 +64,14 @@ a
     .one-sixth
         width: 30.6667%
         margin-left: 4%
-        &:first-child, &:nth-child(4)
+        &:first-child, &:nth-child(4n)
             margin-left: 0
 
 @media screen and (max-width: 420px)
     .one-sixth
         width: 48%
         margin-left: 4% !important
-        &:first-child, &:nth-child(3), &:nth-child(5)
+        &:nth-child(odd)
             margin-left: 0 !important
 
 .row::after
@@ -206,6 +206,9 @@ section h2
                 text-overflow: ellipsis
             li:nth-child(odd)
                 margin-left: 0
+            li:nth-child(odd):last-child
+                width: 100% !important
+                margin: 5px 0 !important
             &::after
                 content: " "
                 clear: both

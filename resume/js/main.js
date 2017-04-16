@@ -41,7 +41,7 @@ window.__sdermoumi__ = window.__sdermoumi__ || (function() {
                     },
                     {
                         prefix: 2016,
-                        title: 'Microsoft® Specialst: Programming in C#'
+                        title: 'Microsoft® Specialist: Programming in C#'
                     },
                     {
                         prefix: 2015,
@@ -148,7 +148,7 @@ window.__sdermoumi__ = window.__sdermoumi__ || (function() {
         picture: 'img/handsomedude.jpg',
         lastName: 'Dermoumi',
         firstName: 'Saïd',
-        title: 'Developpeur Informatique',
+        title: 'Développeur Informatique',
         info: [
             { type: 'address', value: 'Sala al-Jadida, Rabat Salé, Maroc' },
             { type: 'email', value: 'sdermoumi@gmail.com' },
@@ -160,7 +160,7 @@ window.__sdermoumi__ = window.__sdermoumi__ || (function() {
                 title: 'Éducation',
                 items: [
                     {
-                        prefix: 'Currently',
+                        prefix: 'Actuellement',
                         title: 'École Supérieure de Technologie Casablanca (ESTC)',
                         description: 'Licence Professionnelle en Génie Logiciel et Administration Avancée de Systèmes et Réseaux Informatiques',
                         notes: 'Majorant du premier semestre.'
@@ -187,7 +187,7 @@ window.__sdermoumi__ = window.__sdermoumi__ || (function() {
                     },
                     {
                         prefix: 2016,
-                        title: 'Microsoft® Specialst: Programming in C#'
+                        title: 'Microsoft® Specialist: Programming in C#'
                     },
                     {
                         prefix: 2015,
@@ -299,6 +299,7 @@ window.__sdermoumi__ = window.__sdermoumi__ || (function() {
             picture: '',
             firstPicture: '',
             lastName: '',
+            firstName: '',
             title: '',
             info: '',
             sectionsLeft: '',
@@ -306,27 +307,16 @@ window.__sdermoumi__ = window.__sdermoumi__ || (function() {
         }
     });
 
-    var langVm = new Vue({
-        el: '#language-select',
-        data: {
-            code: window.location.hash == '#fr' ? 'en' : 'fr',
-            label: window.location.hash == '#fr' ? 'english' : 'français'
+    var languages = {
+        'en': {
+            label: 'english',
+            data: resumeDataEn
         },
-        methods: {
-            toggleLanguage: function() {
-                if (this.code == 'fr') {
-                    this.code = 'en';
-                    this.label = 'english';
-                    setLanguageObject(resumeDataFr);
-                }
-                else {
-                    this.code = 'fr';
-                    this.label = 'français';
-                    setLanguageObject(resumeDataEn);
-                }
-            }
+        'fr': {
+            label: 'français',
+            data: resumeDataFr
         }
-    })
+    };
 
     function setLanguageObject(obj) {
         vm.picture = obj.picture;
@@ -338,7 +328,32 @@ window.__sdermoumi__ = window.__sdermoumi__ || (function() {
         vm.sectionsRight = obj.sectionsRight;
     }
 
-    setLanguageObject(window.location.hash == '#fr' ? resumeDataFr : resumeDataEn);
+    function setLanguage(lang) {
+        if (!lang || !(lang in languages)) {
+            lang = 'en';
+        }
+
+        setLanguageObject(languages[lang].data);
+        langVm.currentLanguage = lang;
+        window.location.hash = '#' + lang;
+    }
+
+    function getHashLanguage() {
+        return window.location.hash.substr(1) || 'en';
+    }
+
+    var langVm = new Vue({
+        el: '#language-select',
+        data: {
+            languages: languages,
+            currentLanguage: getHashLanguage()
+        },
+        methods: {
+            setLanguage: setLanguage
+        }
+    })
+
+    setLanguage(getHashLanguage());
 
     return true;
 })();

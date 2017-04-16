@@ -17,7 +17,14 @@
   <body>
     <div id="language-select">
       <div class="container">
-        <a :href="'#' + code" @click="toggleLanguage">{{ label }}</a>
+        <a
+          v-for="(lang, code) in languages"
+          v-if="code != currentLanguage"
+          v-bind:href="'#' + code"
+          v-on:click.prevent="setLanguage(code)"
+        >
+          {{ lang.label }}
+        </a>
       </div>
     </div>
     <div id="wrapper" class="container">

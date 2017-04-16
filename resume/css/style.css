@@ -147,7 +147,7 @@ article h3 {
 }
 
 article h4 {
-    font-weight: normal;
+    /*font-weight: normal;*/
     color: #3C454B;
     margin: 0;
 }
@@ -188,7 +188,7 @@ article .section-item, article .section-description {
 
 article h4 .item-prefix {
     color: #E53935;
-    font-variant: small-caps;
+    text-transform: uppercase;
 }
 
 article .item-description {
@@ -197,6 +197,7 @@ article .item-description {
 
 article .notes {
     margin: 0;
+    color: #3C454B;
 }
 
 @media print {

@@ -204,6 +204,10 @@ article .notes {
         font-size: 2em;
     }
 
+    #language-select {
+        display: none;
+    }
+
     #wrapper {
         margin-top: 7rem;
         margin-bottom: 0;

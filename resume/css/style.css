@@ -183,7 +183,7 @@ article .section-description {
     margin: 0;
 }
 
-article .section-item, article .section-description {
+article .section-item, article .section-description, article section.hobbies .section-items {
     margin-left: 1.5em;
     padding-left: 1.5rem;
     border-left: 2px solid #2B4A85;
@@ -201,6 +201,47 @@ article .item-description {
 article .notes {
     margin: 0;
     color: #3C454B;
+}
+
+article section.hobbies .section-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+article section.hobbies li {
+    display: inline-block;
+    min-width: 8rem;
+    text-align: center;
+    margin: .7rem;
+}
+
+article section.hobbies li:before {
+    font-size: 6rem;
+    display: block;
+    line-height: 1;
+    font-family: "Flaticon";
+    color: #3C454B;
+}
+
+article section.hobbies li.videogames:before {
+    content: "\f106";
+}
+
+article section.hobbies li.worldbuilding:before {
+    content: "\f107";
+}
+
+article section.hobbies li.lightnovels:before {
+    content: "\f109";
+}
+
+article section.hobbies li.comics:before {
+    content: "\f10a";
+}
+
+article section.hobbies li.gamedev:before {
+    content: "\f105";
 }
 
 @media print {
@@ -251,7 +292,7 @@ article .notes {
         text-align: left;
     }
 
-    article .section-item, article .section-description {
+    article .section-item, article .section-description, article section.hobbies .section-items {
         margin-left: .5em;
     }
 

@@ -54,17 +54,19 @@
       </header>
       <article class="row">
         <div class="sections-left col-sm-4">
-          <resume-section
+          <section
             v-for="(section, index) in sectionsLeft"
             v-bind:key="'section-left-' + index"
             v-bind:section="section"
+            v-bind:is="section.template || 'resume-section'"
           />
         </div>
         <div class="sections-right col-sm-8">
-          <resume-section
+          <section
             v-for="(section, index) in sectionsRight"
             v-bind:key="'section-right-' + index"
             v-bind:section="section"
+            v-bind:is="section.template || 'resume-section'"
           />
         </div>
       </article>
@@ -82,6 +84,17 @@
               <li v-for="subItem in item.items">{{ subItem }}</li>
             </ul>
             <p class="notes" v-if="item.notes">{{ item.notes }}</p>
+          </li>
+        </ul>
+      </section>
+    </script>
+
+    <script type="text/x-template" id="hobbies-section">
+      <section class="hobbies">
+        <h3>{{ section.title }}</h3>
+        <ul class="section-items">
+          <li v-for="(item, className) in section.items" :class="className">
+            {{ item }}
           </li>
         </ul>
       </section>

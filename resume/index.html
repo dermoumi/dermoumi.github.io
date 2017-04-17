@@ -54,7 +54,7 @@
       </header>
       <article class="row">
         <div class="sections-left col-sm-4">
-          <section
+          <component
             v-for="(section, index) in sections"
             v-if="!section.right"
             v-bind:key="'section-left-' + index"
@@ -63,7 +63,7 @@
           />
         </div>
         <div class="sections-right col-sm-8">
-          <section
+          <component
             v-for="(section, index) in sections"
             v-if="section.right"
             v-bind:key="'section-right-' + index"

@@ -1,6 +1,5 @@
 node_modules
 .npm-debug.log
 tmp
-
-./mongoose.exe
-./mongoose.conf
+mongoose.exe
+mongoose.conf

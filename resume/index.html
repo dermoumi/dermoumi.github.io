@@ -60,7 +60,7 @@
             v-bind:key="'section-left-' + index"
             v-bind:section="section"
             v-bind:is="section.template || 'resume-section'"
-          />
+          ></component>
         </div>
         <div class="sections-right col-sm-8">
           <component
@@ -69,7 +69,7 @@
             v-bind:key="'section-right-' + index"
             v-bind:section="section"
             v-bind:is="section.template || 'resume-section'"
-          />
+          ></component>
         </div>
       </article>
     </div>

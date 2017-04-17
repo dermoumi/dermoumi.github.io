@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
 
     <link rel="icon" type="img/png" href="img/favicon.png">
   </head>
@@ -55,7 +55,8 @@
       <article class="row">
         <div class="sections-left col-sm-4">
           <section
-            v-for="(section, index) in sectionsLeft"
+            v-for="(section, index) in sections"
+            v-if="!section.right"
             v-bind:key="'section-left-' + index"
             v-bind:section="section"
             v-bind:is="section.template || 'resume-section'"
@@ -63,7 +64,8 @@
         </div>
         <div class="sections-right col-sm-8">
           <section
-            v-for="(section, index) in sectionsRight"
+            v-for="(section, index) in sections"
+            v-if="section.right"
             v-bind:key="'section-right-' + index"
             v-bind:section="section"
             v-bind:is="section.template || 'resume-section'"
@@ -96,11 +98,12 @@
           <li v-for="(item, className) in section.items" :class="className">
             {{ item }}
           </li>
+          <li class="dummy"></li>
         </ul>
       </section>
     </script>
 
-    <script type="text/javascript" src="js/vue.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/vue.min.js"></script>
+    <script type="text/javascript" src="js/main.min.js"></script>
   </body>
 </html>

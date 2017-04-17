@@ -10,7 +10,7 @@ window.__sdermoumi__ = window.__sdermoumi__ || (function() {
             { type: 'tel', value: '(+212) 6 25 25 99 45', link: 'tel:+212625259945' },
             { type: 'github', value: 'github.com/dermoumi', link: 'http://github.com/dermoumi' },
         ],
-        sectionsLeft: [
+        sections: [
             {
                 title: 'Education',
                 items: [
@@ -31,49 +31,8 @@ window.__sdermoumi__ = window.__sdermoumi__ || (function() {
                 ]
             },
             {
-                title: 'Certifications',
-                items: [
-                    {
-                        prefix: 2016,
-                        title: 'Microsoft® Specialist: Programming in HTML5 with JavaScript and CSS3'
-                    }, {
-                        prefix: 2016,
-                        title: 'Microsoft® Specialist: Programming in C#'
-                    }, {
-                        prefix: 2015,
-                        title: 'Microsoft® Certified Professional'
-                    }
-                ]
-            },
-            {
-                title: 'Languages',
-                items: [
-                    {
-                        prefix: 'French',
-                        title: 'Fluent',
-                        description: 'Able to quickly express ideas, develop views or write reports.'
-                    }, {
-                        prefix: 'English',
-                        title: 'Fluent',
-                        description: 'Able to quickly express ideas, develop views, write reports or contribute to a discussion.'
-                    }
-                ]
-            },
-            {
-                title: 'Hobbies',
-                template: 'hobbies-section',
-                items: {
-                    'videogames': 'Video games',
-                    'gamedev': 'Gamedev',
-                    'comics': 'Comics',
-                    'worldbuilding': 'Worldbuilding',
-                    'lightnovels': 'Light Novels'
-                }
-            }
-        ],
-        sectionsRight: [
-            {
                 title: 'Skills',
+                right: true,
                 items: [
                     {
                         title: 'Advanced Object Oriented Programming',
@@ -100,7 +59,23 @@ window.__sdermoumi__ = window.__sdermoumi__ || (function() {
                 ]
             },
             {
+                title: 'Certifications',
+                items: [
+                    {
+                        prefix: 2016,
+                        title: 'Microsoft® Specialist: Programming in HTML5 with JavaScript and CSS3'
+                    }, {
+                        prefix: 2016,
+                        title: 'Microsoft® Specialist: Programming in C#'
+                    }, {
+                        prefix: 2015,
+                        title: 'Microsoft® Certified Professional'
+                    }
+                ]
+            },
+            {
                 title: 'Experience',
+                right: true,
                 items: [
                     {
                         prefix: 2017,
@@ -133,6 +108,31 @@ window.__sdermoumi__ = window.__sdermoumi__ || (function() {
                         ]
                     }
                 ]
+            },
+            {
+                title: 'Languages',
+                items: [
+                    {
+                        prefix: 'French',
+                        title: 'Fluent',
+                        description: 'Able to quickly express ideas, develop views or write reports.'
+                    }, {
+                        prefix: 'English',
+                        title: 'Fluent',
+                        description: 'Able to quickly express ideas, develop views, write reports or contribute to a discussion.'
+                    }
+                ]
+            },
+            {
+                title: 'Hobbies',
+                template: 'hobbies-section',
+                items: {
+                    'videogames': 'Video games',
+                    'gamedev': 'Gamedev',
+                    'comics': 'Comics',
+                    'worldbuilding': 'Worldbuilding',
+                    'lightnovels': 'Light Novels'
+                }
             }
         ]
     };
@@ -148,7 +148,7 @@ window.__sdermoumi__ = window.__sdermoumi__ || (function() {
             { type: 'tel', value: '(+212) 6 25 25 99 45', link: 'tel:+212625259945' },
             { type: 'github', value: 'github.com/dermoumi', link: 'http://github.com/dermoumi' },
         ],
-        sectionsLeft: [
+        sections: [
             {
                 title: 'Éducation',
                 items: [
@@ -170,49 +170,8 @@ window.__sdermoumi__ = window.__sdermoumi__ || (function() {
                 ]
             },
             {
-                title: 'Certifications',
-                items: [
-                    {
-                        prefix: 2016,
-                        title: 'Microsoft® Specialist: Programming in HTML5 with JavaScript and CSS3'
-                    }, {
-                        prefix: 2016,
-                        title: 'Microsoft® Specialist: Programming in C#'
-                    }, {
-                        prefix: 2015,
-                        title: 'Microsoft® Certified Professional'
-                    }
-                ]
-            },
-            {
-                title: 'Langues',
-                items: [
-                    {
-                        prefix: 'Français',
-                        title: 'Courant',
-                        description: "Capable d'exprimer des idées, développer un point de vue ou écrire des rapports."
-                    }, {
-                        prefix: 'English',
-                        title: 'Courant',
-                        description: "Capable d'exprimer des idées, développer un point de vue, contribuer à une discussion ou écrire des rapports."
-                    }
-                ]
-            },
-            {
-                title: 'Loisirs et Intérêts',
-                template: 'hobbies-section',
-                items: {
-                    'videogames': 'Jeux Vidéo',
-                    'worldbuilding': 'Worldbuilding',
-                    'gamedev': 'Gamedev',
-                    'comics': 'Bandes Dessinées',
-                    'lightnovels': 'Light novels'
-                }
-            }
-        ],
-        sectionsRight: [
-            {
                 title: 'Compétences',
+                right: true,
                 items: [
                     {
                         title: 'Notions avancées en Programmation Orientée Objet',
@@ -239,7 +198,23 @@ window.__sdermoumi__ = window.__sdermoumi__ || (function() {
                 ]
             },
             {
+                title: 'Certifications',
+                items: [
+                    {
+                        prefix: 2016,
+                        title: 'Microsoft® Specialist: Programming in HTML5 with JavaScript and CSS3'
+                    }, {
+                        prefix: 2016,
+                        title: 'Microsoft® Specialist: Programming in C#'
+                    }, {
+                        prefix: 2015,
+                        title: 'Microsoft® Certified Professional'
+                    }
+                ]
+            },
+            {
                 title: 'Expérience',
+                right: true,
                 items: [
                     {
                         prefix: 2017,
@@ -270,6 +245,31 @@ window.__sdermoumi__ = window.__sdermoumi__ || (function() {
                         ]
                     }
                 ]
+            },
+            {
+                title: 'Langues',
+                items: [
+                    {
+                        prefix: 'Français',
+                        title: 'Courant',
+                        description: "Capable d'exprimer des idées, développer un point de vue ou écrire des rapports."
+                    }, {
+                        prefix: 'English',
+                        title: 'Courant',
+                        description: "Capable d'exprimer des idées, développer un point de vue, contribuer à une discussion ou écrire des rapports."
+                    }
+                ]
+            },
+            {
+                title: 'Loisirs et Intérêts',
+                template: 'hobbies-section',
+                items: {
+                    'videogames': 'Jeux Vidéo',
+                    'worldbuilding': 'Worldbuilding',
+                    'gamedev': 'Gamedev',
+                    'comics': 'Bandes Dessinées',
+                    'lightnovels': 'Light novels'
+                }
             }
         ]
     };
@@ -292,9 +292,8 @@ window.__sdermoumi__ = window.__sdermoumi__ || (function() {
             lastName: '',
             firstName: '',
             title: '',
-            info: '',
-            sectionsLeft: '',
-            sectionsRight: ''
+            info: [],
+            sections: [],
         }
     });
 
@@ -309,14 +308,34 @@ window.__sdermoumi__ = window.__sdermoumi__ || (function() {
         }
     };
 
+    function handleMediaChange(mql) {
+        if (mql.matches) {
+            for (var n in vm.sections) {
+                if (vm.sections[n].right !== undefined) {
+                    vm.sections[n].right = false;
+                }
+            }
+        }
+        else {
+            for (var n in vm.sections) {
+                if (vm.sections[n].right !== undefined) {
+                    vm.sections[n].right = true;
+                }
+            }
+        }
+    }
+
+    var mql = window.matchMedia("(max-width: 767px)");
+    mql.addListener(handleMediaChange);
+    handleMediaChange(mql);
+
     function setLanguageObject(obj) {
         vm.picture = obj.picture;
         vm.firstName = obj.firstName;
         vm.lastName = obj.lastName;
         vm.title = obj.title;
         vm.info = obj.info;
-        vm.sectionsLeft = obj.sectionsLeft;
-        vm.sectionsRight = obj.sectionsRight;
+        vm.sections = obj.sections;
     }
 
     function setLanguage(lang) {
@@ -327,6 +346,7 @@ window.__sdermoumi__ = window.__sdermoumi__ || (function() {
         setLanguageObject(languages[lang].data);
         langVm.currentLanguage = lang;
         window.location.hash = '#' + lang;
+        handleMediaChange(mql);
     }
 
     function getHashLanguage() {

@@ -206,7 +206,7 @@ article .notes {
 article section.hobbies .section-items {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    /*justify-content: flex-start;*/
 }
 
 article section.hobbies li {
@@ -214,6 +214,7 @@ article section.hobbies li {
     min-width: 8rem;
     text-align: center;
     margin: .7rem;
+    flex-grow: 1;
 }
 
 article section.hobbies li:before {
@@ -222,6 +223,12 @@ article section.hobbies li:before {
     line-height: 1;
     font-family: "Flaticon";
     color: #3C454B;
+}
+
+article section.hobbies li.dummy {
+    flex-grow: 2;
+    content: "";
+    height: 0;
 }
 
 article section.hobbies li.videogames:before {

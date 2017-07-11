@@ -15,7 +15,7 @@ window.__sdermoumi__ = window.__sdermoumi__ || (function() {
                 title: 'Education',
                 items: [
                     {
-                        prefix: 'Currently',
+                        prefix: 2017,
                         title: 'École Supérieure de Technologie Casablanca (ESTC)',
                         description: 'Professional Licence in Software Engineering and Advanced Network and System' +
                             ' Administration'
@@ -78,6 +78,14 @@ window.__sdermoumi__ = window.__sdermoumi__ || (function() {
                 right: true,
                 items: [
                     {
+                        prefix: 2017,
+                        title: 'End-of-course Internship at United Remote (Agdal, Rabat)',
+                        items: [
+                            'Implementing functional tests for a web-application (EffiCity), following Behaviour-Driving Development best practices',
+                            'Tests are written in Python using Behave and Selenium with PhantomJS',
+                            'Implementing basic Continuous Integration using Docker and Gitlab-CI'
+                        ]
+                    }, {
                         prefix: 2017,
                         title: 'School project: A website to manage applications for the Professional Licence at the ESTC',
                         items: [
@@ -153,7 +161,7 @@ window.__sdermoumi__ = window.__sdermoumi__ || (function() {
                 title: 'Éducation',
                 items: [
                     {
-                        prefix: 'Actuellement',
+                        prefix: 2017,
                         title: 'École Supérieure de Technologie Casablanca (ESTC)',
                         description: 'Licence Professionnelle en Génie Logiciel et Administration Avancée de Systèmes et Réseaux Informatiques',
                         notes: 'Majorant du premier semestre.'
@@ -217,6 +225,14 @@ window.__sdermoumi__ = window.__sdermoumi__ || (function() {
                 right: true,
                 items: [
                     {
+                        prefix: 2017,
+                        title: 'Stage de fin d\'études United Remote (Agdal, Rabat)',
+                        items: [
+                            'Implémentation de tests fonctionnels pour un application web (EffiCity), conforme aux pratiques de développement basé sur comportement',
+                            'Tests écrits en Python, utilisant Behave et Selenium avec PhantomJS',
+                            'Implémentation d\'Intégration Continue en utilisant Gitlab-CI et Docker'
+                        ]
+                    }, {
                         prefix: 2017,
                         title: "Projet d'études : Site de préinscription en ligne pour la Licence Professionnelle à l'ESTC",
                         items: [
